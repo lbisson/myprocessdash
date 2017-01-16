@@ -1,0 +1,21 @@
+<h1><%= pluralize(@projects.count, 'Project') %></h1>
+<% @projects.each do |project| %>
+	<article>
+		<header>
+			<h2><%= link_to(project.proj_name, project) %></h2>
+		</header>
+		<p>
+			<%= project.description %>
+		</p>
+		<table>
+		<tr>
+			<th>Client: </th>
+			<td><%= project.client %></td>
+		</tr>
+		<tr>
+			<th>Status: </th>
+			<td><%= project.status%></td>
+		</tr>
+		</table>
+	</article>
+<% end %>

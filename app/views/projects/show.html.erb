@@ -1,0 +1,23 @@
+<h1><%= @project.proj_name %></h1>
+	<article>
+		<p>
+			<%= @project.description %>
+		</p>
+		<table>
+		<tr>
+			<th>Client:</th>
+			<td><%= @project.client %></td>
+		</tr>
+		<tr>
+			<th>Status:</th>
+			<td><%= @project.status %></td>
+		</tr>
+		</table>
+	</article>
+
+
+<%= link_to "All Projects", projects_path %>
+<%= link_to "Edit", edit_project_path(@project) %>
+<%= link_to "Delete", project_path(@project), method: :delete, 
+	data: {confirm: 'Are you sure?'} %>
+
